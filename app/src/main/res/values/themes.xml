@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.PhotoDale" parent="android:Theme.Material.Light.NoActionBar" />
+    
+    <style name="Theme.PhotoDale.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/red_500</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_logo</item>
+        <item name="postSplashScreenTheme">@style/Theme.PhotoDale</item>
+    </style>
+</resources>
