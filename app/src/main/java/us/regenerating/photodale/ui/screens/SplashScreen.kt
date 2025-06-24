@@ -15,6 +15,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import us.regenerating.photodale.ui.theme.PhotoDaleBlue
+import us.regenerating.photodale.ui.theme.PhotoDaleLightBlue
+import us.regenerating.photodale.ui.theme.PhotoDaleLightPurple
 
 @Composable
 fun SplashScreen() {
@@ -24,8 +27,8 @@ fun SplashScreen() {
             .background(
                 Brush.verticalGradient(
                     colors = listOf(
-                        Color(0xFFE3F2FD), // Light blue
-                        Color(0xFFF3E5F5)  // Light purple
+                        PhotoDaleLightBlue, // Light blue
+                        PhotoDaleLightPurple  // Light purple
                     )
                 )
             ),
@@ -36,7 +39,7 @@ fun SplashScreen() {
             style = TextStyle(
                 fontSize = 48.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF2196F3) // Blue color for now
+                color = PhotoDaleBlue // Use consistent blue color
             ),
             textAlign = TextAlign.Center
         )

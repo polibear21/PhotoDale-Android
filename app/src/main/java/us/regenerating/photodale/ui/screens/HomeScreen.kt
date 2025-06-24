@@ -10,9 +10,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import us.regenerating.photodale.ui.theme.PhotoDaleBlue
 
 @Composable
 fun HomeScreen() {
@@ -26,7 +28,7 @@ fun HomeScreen() {
             text = "PhotoDale",
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.primary
+            color = PhotoDaleBlue
         )
         Spacer(modifier = Modifier.height(32.dp))
         Text(

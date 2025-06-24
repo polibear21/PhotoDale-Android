@@ -1,5 +1,6 @@
 package us.regenerating.photodale.ui.components
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
@@ -15,6 +16,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -69,13 +71,15 @@ fun PhotoDaleApp(modifier: Modifier = Modifier) {
         NavHost(
             navController = navController,
             startDestination = Screen.Home.route,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
         ) {
             composable(Screen.Home.route) { HomeScreen() }
             composable(Screen.BGReplace.route) { BGReplaceScreen() }
             composable(Screen.Engrave.route) { EngraveScreen() }
-            composable(Screen.More.route) { MoreScreen() }
             composable(Screen.Settings.route) { SettingsScreen() }
+            composable(Screen.More.route) { MoreScreen() }
         }
     }
 }
